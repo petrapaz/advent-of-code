@@ -1,7 +1,7 @@
 const fs = require('fs'); //load file system
 
 try {
-  const calorieInput = fs.readFileSync('input.txt', 'utf8');
+  const calorieInput = fs.readFileSync('input-1.txt', 'utf8');
   // const elfGroups = calorieInput.trim().split('\n\n'); //not working on reading the empty lines
   const elfGroups = calorieInput.trim().split(/\r?\n\r?\n/);  //Windows, Unix/Mac line-end
 
