@@ -2,6 +2,7 @@ Algorithm idea
 
 The overall algorithm consists of iterating through each line of the input (each representing a rucksack).
 
+--PART ONE--
 1) Read a line of input: Get the string representing the contents of a single rucksack.
 
 2) Split the string: Divide the string into two equal halves. 
@@ -26,3 +27,24 @@ Since the problem guarantees there is exactly one common item, we can stop searc
 6) Repeat: Continue this process for all lines in the input file.
 
 7) Final result: The final running total (sum) is the answer.
+
+
+--PART TWO--
+Elves are grouped in sets of 3 lines.
+Each group has one common item type (a single character) that appears in all three rucksacks.
+That common item = the badge for the group.
+
+1) Read input → split into array of lines.
+
+2) Group into chunks of 3.
+
+3) For each group of 3:
+    - Convert each rucksack (string) into a Set of characters.
+    - Find the intersection of the 3 sets (the one character that all three share).
+    - That character is the badge.
+
+4) Compute its priority using the same function from part one.
+
+5) Add it to a running total.
+
+6) Return the total.
